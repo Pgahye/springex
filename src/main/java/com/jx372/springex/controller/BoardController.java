@@ -1,6 +1,7 @@
 package com.jx372.springex.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,6 +33,13 @@ public class BoardController {
 		System.out.println(name);
 		
 		return "BoardController: update";
+	}
+	
+	@ResponseBody
+	@RequestMapping("/view{no}")
+	public String view(@PathVariable("no") Long no){
+		
+		return "BoardController: view  :"+no;
 	}
 	
 	
