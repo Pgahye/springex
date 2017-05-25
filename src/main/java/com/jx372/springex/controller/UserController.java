@@ -22,7 +22,7 @@ public class UserController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("/join")
+	@RequestMapping({"/join","/dojoin"})
 	public String doJoin(){
 		
 		return "UserController:doJoin";
